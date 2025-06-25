@@ -1,12 +1,24 @@
 console.log("Hello World")
 
-function humanScore(){
-    
-}
+let humanScore =0;
+
+let computerScore = 0;
 
 const rock=0;
 const paper=1;
 const scissors=2;
+
+function playRound(humanChoice,computerChoice){
+   if (humanChoice.toLowerCase()=("rock"||"paper"||"scissors"))
+        alert (humanChoice);
+
+   
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
 
 let choice =("rock","paper","scissors");
 
