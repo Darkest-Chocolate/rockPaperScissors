@@ -10,7 +10,7 @@ const scissors=2;
 
 function playRound(humanChoice,computerChoice){
    if (humanChoice.toLowerCase()=("rock"||"paper"||"scissors"))
-        alert (humanChoice);
+        alert (humanChoice); 
 
    
 }
