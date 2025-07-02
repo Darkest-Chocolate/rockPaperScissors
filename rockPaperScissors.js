@@ -9,10 +9,23 @@ const paper=1;
 const scissors=2;
 
 function playRound(humanChoice,computerChoice){
-   if (humanChoice.toLowerCase()=("rock"||"paper"||"scissors"))
-        alert (humanChoice); 
+    if(playRound(rock,paper)){
+        alert("You lose, paper beats rock");
+    }else if(paper,scissors){
+        alert("You lose, scissors beats paper");
+    }else if (scissors,rock){
+        alert("You lose,rock betas scissors");
+    }else if ((paper,paper)||(rock,rock)||(scissors,scissors)){
+        alert("No wayyyy,it's a draw!");
+    }else{
+        alert("You won!You are very lucky, death to skynet!!")
+    }
 
-   
+    
+   if (humanChoice.toLowerCase()=("rock"||"paper"||"scissors")){
+        alert (humanChoice); 
+   }
+
 }
 
 const humanSelection = getHumanChoice();
