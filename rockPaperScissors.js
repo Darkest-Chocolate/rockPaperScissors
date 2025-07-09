@@ -13,8 +13,17 @@ const scissors=2;
 let choice =("rock","paper","scissors");
 
 function getComputerChoice(){
+    let getComputerChoiceValue= getComputerChoice
+        if (getComputerChoiceValue <= 0){
+            getComputerChoiceValue== ("rock")
+        }else if (getComputerChoiceValue =>1 && <2){
+            getComputerChoiceValue=="paper"
+        }else{
+            getComputerChoiceValue=="scissors";
+
     return Math.floor(Math.random(3))
     }
+}
 
  
 function getHumanChoice(){
@@ -41,9 +50,10 @@ function playRound(humanChoice,computerChoice){
     }else if ((paper,paper)||(rock,rock)||(scissors,scissors)){
         alert("No wayyyy,it's a draw!")
     }else{
-        return (alert("You won!You are very lucky, death to skynet!!"));
+        alert("You won!You are very lucky, death to skynet!!");
+    
     }
-
+    computerChoice = computerSelection
     humanChoice = ("rock")||("paper")||("scissors")
         return humanChoice.toLowerCase(); 
 }
