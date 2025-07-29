@@ -4,21 +4,40 @@ let humanScore =0;
 
 let computerScore = 0;
 
+
+function playRound(humanChoice,computerChoice){
+    humanChoice =getHumanChoice();
+    humanChoice =humanChoice.toLowerCase();
+        switch(humanChoice,computerChoice) {
+            case ("rock","paper"):
+               console.log("You lose, paper beats rock");
+                break;
+            case "paper","scissors": 
+                console.log("You lose, scissors beats paper");
+                break;
+            case "scissors","rock": 
+                console.log("You lose,rock betas scissors");
+                break;
+            default : 
+                console.log("No wayyyy,it's a draw!");
+        }
+    }
+    
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
 const rock=0;
 const paper=1;
 const scissors=2;
 
 function getComputerChoice(){
-    var getComputerChoiceValue 
-        if (getComputerChoiceValue <= 0){
-            getComputerChoiceValue== ("rock")
-        }else if (getComputerChoiceValue =>1){
-            getComputerChoiceValue=="paper"
-        }else{
-            getComputerChoiceValue=="scissors";
-    return Math.floor(Math.random(4))
+   
+    return Math.floor(Math.random(3))
     }
-}
 
 function getHumanChoice(){
     var getHumanChoiceValue = prompt("What is your choice warrior?")
@@ -30,28 +49,3 @@ function getHumanChoice(){
             alert("So you choose Scissors!");
 }
 }
-
-function playRound(humanChoice,computerChoice){
-
-        switch(humanChoice,computerChoice) {
-            case ("rock","paper"):
-               "You lose, paper beats rock";
-                break;
-            case "paper","scissors": "You lose, scissors beats paper";
-                break;
-            case "scissors","rock": "You lose,rock betas scissors";
-                break;
-            default : "No wayyyy,it's a draw!"; 
-                break;
-        }
-    }
-    
-
-   let humanChoice = ("rock")||("paper")||("scissors")
-         humanChoice.toLowerCase(); 
-
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
