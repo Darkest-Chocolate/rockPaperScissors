@@ -36,39 +36,40 @@ function getHumanChoice(){
             alert("So you choose Paper!")
         }else{
             alert("So you choose Scissors!");
+     }
+    
+    return getHumanChoiceValue;   
 }
-    var humanResult = getHumanChoiceValue;
-    return humanResult;      
-    }
 
 
 
 
 function playRound(humanChoice,computerChoice){
-        switch(humanChoice,computerChoice) {
-            case ("rock","paper"):
-               console.log("You lose, paper beats rock");
+        switch(humanChoice+","+computerChoice) {
+            case "rock","paper":
+               result = "You lose, paper beats rock";
                 break;
-            case ("paper","scissors"): 
-                console.log("You lose, scissors beats paper");
+            case "paper","scissors": 
+                result = "You lose, scissors beats paper";
                 break;
-            case ("scissors","rock"): 
-                console.log("You lose,rock beats scissors");
+            case "scissors","rock": 
+                result = "You lose,rock beats scissors";
                 break;
 
-            case ("paper","rock"):
-               console.log("You win, paper beats rock");
+            case "paper","rock":
+               result = "You win, paper beats rock";
                 break;
-            case ("scissors","paper"): 
-                console.log("You win, scissors beats paper");
+            case "scissors","paper": 
+                result = "You win, scissors beats paper";
                 break;
-            case ("rock","scissors"): 
-                console.log("You win,rock beats scissors");
+            case "rock","scissors": 
+                result ="You win,rock beats scissors";
                 break;
 
             default : 
-                console.log("No wayyyy,it's a draw!");
+                result = "No wayyyy,it's a draw!";
         }
+        return result;
     }
     
 
