@@ -14,20 +14,19 @@ function getComputerChoice(){
 
     switch(getComputerChoiceValue){
         case(0):
-            console.log("The Computer chose Rock");
+            alert("The Computer chose Rock");
             break;
         case(1):
-            console.log("The Computer chose Paper");
+            alert("The Computer chose Paper");
             break;
         case(3):
-            console.log("The Computer chose Scissors");
+            alert("The Computer chose Scissors");
             break; 
     }
 
     return getComputerChoiceValue[computerValueIndex];
     }
     
-console.log(getComputerChoice());
 
 function getHumanChoice(){
     var getHumanChoiceValue = prompt("What is your choice warrior?")
@@ -38,7 +37,11 @@ function getHumanChoice(){
         }else{
             alert("So you choose Scissors!");
 }
-}
+    var humanResult = getHumanChoiceValue;
+    return humanResult;      
+    }
+
+
 
 
 function playRound(humanChoice,computerChoice){
