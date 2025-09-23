@@ -19,7 +19,7 @@ function getComputerChoice(){
         case(1):
             alert("The Computer chose Paper");
             break;
-        case(3):
+        default:
             alert("The Computer chose Scissors");
             break; 
     }
@@ -47,29 +47,27 @@ function getHumanChoice(){
 function playRound(humanChoice,computerChoice){
         switch(humanChoice+","+computerChoice) {
             case "rock","paper":
-               result = "You lose, paper beats rock";
-                break;
+                return "You lose, paper beats rock";
+                
             case "paper","scissors": 
-                result = "You lose, scissors beats paper";
-                break;
+                return "You lose, scissors beats paper";
+                
             case "scissors","rock": 
-                result = "You lose,rock beats scissors";
-                break;
+                return "You lose,rock beats scissors";
+                
 
             case "paper","rock":
-               result = "You win, paper beats rock";
-                break;
+                return "You win, paper beats rock";
+                
             case "scissors","paper": 
-                result = "You win, scissors beats paper";
-                break;
+                return "You win, scissors beats paper";
+                
             case "rock","scissors": 
-                result ="You win,rock beats scissors";
-                break;
+                return "You win,rock beats scissors";
 
             default : 
-                result = "No wayyyy,it's a draw!";
+                return "No wayyyy,it's a draw!";
         }
-        return result;
     }
     
 
@@ -79,7 +77,7 @@ const result = playRound(humanSelection, computerSelection);
 
 console.log("Human:", humanSelection, "... Computer:", computerSelection);
 console.log("Result:", result);
-alert ("Result:"+ result);
+alert ("Result: "+ result);
 
 
 
