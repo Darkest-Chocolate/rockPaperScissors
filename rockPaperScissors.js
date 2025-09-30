@@ -48,22 +48,28 @@ function getHumanChoice(){
 function playRound(humanChoice,computerChoice){
         switch(humanChoice+","+computerChoice) {
             case "rock,paper":
+                computerScore++;
                 return "You lose, paper beats rock";
                 
             case "paper,scissors": 
+                computerScore++;
                 return "You lose, scissors beats paper";
                 
             case "scissors,rock": 
+                computerScore++;
                 return "You lose,rock beats scissors";
                 
 
             case "paper,rock":
+                humanScore++;
                 return "You win, paper beats rock";
                 
             case "scissors,paper": 
+                humanScore++;
                 return "You win, scissors beats paper";
                 
-            case "rock,scissors": 
+            case "rock,scissors":
+                humanScore++; 
                 return "You win,rock beats scissors";
 
             default : 
@@ -81,6 +87,11 @@ console.log("Result:", result);
 alert ("Result: "+ result);
 
 
+
+function scoreCounter(){
+
+
+}
 
 
 
