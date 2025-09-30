@@ -12,17 +12,20 @@ function getComputerChoice(){
     const getComputerChoiceValue =["rock","paper","scissors"];
     const computerValueIndex = Math.floor(Math.random()*3);
 
-    switch(getComputerChoiceValue){
-        case 0:
-            return "The Computer chose Rock";
-            
-        case 1:
-            return "The Computer chose Paper";
-            
+    let computerChoice;
+
+    switch(computerValueIndex){
+        case(0):
+            computerChoice ="rock";
+            break;
+        case(1):
+            computerChoice ="paper";
+            break;
         default:
-            return "The Computer chose Scissors";
-    
+            computerChoice ="scissors";
+            break; 
     }
+    return computerChoice;
     }
     
 
@@ -44,23 +47,23 @@ function getHumanChoice(){
 
 function playRound(humanChoice,computerChoice){
         switch(humanChoice+","+computerChoice) {
-            case "rock","paper":
+            case "rock,paper":
                 return "You lose, paper beats rock";
                 
-            case "paper","scissors": 
+            case "paper,scissors": 
                 return "You lose, scissors beats paper";
                 
-            case "scissors","rock": 
+            case "scissors,rock": 
                 return "You lose,rock beats scissors";
                 
 
-            case "paper","rock":
+            case "paper,rock":
                 return "You win, paper beats rock";
                 
-            case "scissors","paper": 
+            case "scissors,paper": 
                 return "You win, scissors beats paper";
                 
-            case "rock","scissors": 
+            case "rock,scissors": 
                 return "You win,rock beats scissors";
 
             default : 
