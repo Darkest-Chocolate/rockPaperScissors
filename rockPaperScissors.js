@@ -13,18 +13,16 @@ function getComputerChoice(){
     const computerValueIndex = Math.floor(Math.random()*3);
 
     switch(getComputerChoiceValue){
-        case(0):
-            alert("The Computer chose Rock");
-            break;
-        case(1):
-            alert("The Computer chose Paper");
-            break;
+        case 0:
+            return "The Computer chose Rock";
+            
+        case 1:
+            return "The Computer chose Paper";
+            
         default:
-            alert("The Computer chose Scissors");
-            break; 
+            return "The Computer chose Scissors";
+    
     }
-
-    return getComputerChoiceValue[computerValueIndex];
     }
     
 
