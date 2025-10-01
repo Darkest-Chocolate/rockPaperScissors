@@ -86,6 +86,10 @@ console.log("Human:", humanSelection, "... Computer:", computerSelection);
 console.log("Result:", result);
 alert ("Result: "+ result);
 
+console.log(`Current Score - You: ${humanScore}, Computer: ${computerScore}`);
+alert(result + ` Score: You ${humanScore} - Computer ${computerScore}`);
+
+
 
 
 function scoreCounter(){
