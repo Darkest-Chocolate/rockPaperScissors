@@ -45,7 +45,13 @@ function getHumanChoice(){
 
 
 
-function playRound(humanChoice,computerChoice){
+
+
+
+function playGame(){
+
+    
+    function playRound(humanChoice,computerChoice){
         switch(humanChoice+","+computerChoice) {
             case "rock,paper":
                 computerScore++;
@@ -76,26 +82,26 @@ function playRound(humanChoice,computerChoice){
                 return "No wayyyy,it's a draw!";
         }
     }
-    
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-const result = playRound(humanSelection, computerSelection);
-
-console.log("Human:", humanSelection, "... Computer:", computerSelection);
-console.log("Result:", result);
-alert ("Result: "+ result);
-
-console.log(`Current Score - You: ${humanScore}, Computer: ${computerScore}`);
-alert(result + ` Score: You ${humanScore} - Computer ${computerScore}`);
 
 
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    const result = playRound(humanSelection, computerSelection);
 
+    console.log("Human:", humanSelection, "... Computer:", computerSelection);
+    console.log("Result:", result);
+    alert ("Result: "+ result);
 
-function scoreCounter(){
-
+    console.log(`Current Score - You: ${humanScore}, Computer: ${computerScore}`);
+    alert(result + ` Score: You ${humanScore} - Computer ${computerScore}`);
 
 }
+
+for (let index = 0; index < 5; index++) {
+    playGame();
+    }
+
+
 
 
 
