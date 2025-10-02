@@ -93,7 +93,7 @@ function playGame(){
     alert ("Result: "+ result);
 
     console.log(`Current Score - You: ${humanScore}, Computer: ${computerScore}`);
-    alert(result + ` Score: You ${humanScore} - Computer ${computerScore}`);
+    alert(result + ` \nScore: You ${humanScore} - Computer ${computerScore}`);
 
 }
 
