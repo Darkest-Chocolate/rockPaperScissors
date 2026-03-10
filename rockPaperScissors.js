@@ -97,11 +97,26 @@ function playGame(){
 
 }
 
-for (let index = 0; index < 5; index++) {
-    playGame();
-    }
+// for (let index = 0; index < 5; index++) {
+//     playGame();
+//     }
 
 
+
+const paperButton =  document.querySelector("#Paper");
+
+Paper.addEventListener("click", playRound(Paper, computerSelection));
+  
+
+const rockButton =  document.querySelector("#Rock");
+
+Rock.addEventListener("click", playRound(Rock, computerSelection));
+
+
+const scissorsButton =  document.querySelector("#Scissors");
+
+Scissors.addEventListener("click", playRound(Scissors, computerSelection));
+  
 
 
 
