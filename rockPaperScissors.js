@@ -64,6 +64,8 @@ function getComputerChoice(){
                 default : 
                     return "No wayyyy,it's a draw!";
             }
+
+            
         }
     
     
@@ -103,6 +105,12 @@ function getHumanChoice(humanSelection){
   computerChoiceEl.textContent = `Computer chose: ${computerSelection}`;
   scoreEl.textContent = `Score — You: ${humanScore}  Computer: ${computerScore}`;
 
+
+  if (humanScore >= 5 || computerScore >= 5) {
+   
+    const winner = humanScore > computerScore ? "You win the game!" : "Computer wins the game!";
+    resultEl.textContent = `${result} — ${winner}`;
+}
 }
 
 
@@ -121,6 +129,8 @@ rockButton.addEventListener("click", () => getHumanChoice("rock"));
 
 const scissorsButton =  document.querySelector("#Scissors");
 scissorsButton.addEventListener("click", () => getHumanChoice("scissors"));
+
+
 
 
 
