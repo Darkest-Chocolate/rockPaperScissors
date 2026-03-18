@@ -27,65 +27,49 @@ function getComputerChoice(){
     }
     return computerChoice;
     }
-    
 
-function getHumanChoice(humanSelection){
-    const computerSelection = getComputerChoice();
-
-    const result = playRound(humanSelection, computerSelection);
-
-    resultEl.textContent = `Result: ${roundResult}`;
-  computerChoiceEl.textContent = `Computer chose: ${computerSelection}`;
-  scoreEl.textContent = `Score — You: ${humanScore}  Computer: ${computerScore}`;
-
-}
-
-
-
-
-
-
-
-function playGame(){
 
     
-    function playRound(humanChoice,computerChoice){
-
-        const human = String(humanChoice).toLowerCase();
-        const comp = String(computerChoice).toLowerCase();
-
-        switch(humanChoice+","+computerChoice) {
-            case "rock,paper":
-                computerScore++;
-                return "You lose, paper beats rock";
-                
-            case "paper,scissors": 
-                computerScore++;
-                return "You lose, scissors beats paper";
-                
-            case "scissors,rock": 
-                computerScore++;
-                return "You lose,rock beats scissors";
-                
-
-            case "paper,rock":
-                humanScore++;
-                return "You win, paper beats rock";
-                
-            case "scissors,paper": 
-                humanScore++;
-                return "You win, scissors beats paper";
-                
-            case "rock,scissors":
-                humanScore++; 
-                return "You win,rock beats scissors";
-
-            default : 
-                return "No wayyyy,it's a draw!";
+        function playRound(humanChoice,computerChoice){
+    
+            const human = String(humanChoice).toLowerCase();
+            const comp = String(computerChoice).toLowerCase();
+    
+            switch(humanChoice+","+computerChoice) {
+                case "rock,paper":
+                    computerScore++;
+                    return "You lose, paper beats rock";
+                    
+                case "paper,scissors": 
+                    computerScore++;
+                    return "You lose, scissors beats paper";
+                    
+                case "scissors,rock": 
+                    computerScore++;
+                    return "You lose,rock beats scissors";
+                    
+    
+                case "paper,rock":
+                    humanScore++;
+                    return "You win, paper beats rock";
+                    
+                case "scissors,paper": 
+                    humanScore++;
+                    return "You win, scissors beats paper";
+                    
+                case "rock,scissors":
+                    humanScore++; 
+                    return "You win,rock beats scissors";
+    
+                default : 
+                    return "No wayyyy,it's a draw!";
+            }
         }
-    }
+    
+    
+    
 
-}
+
 
 
 const container = document.querySelector("#container");
@@ -109,6 +93,19 @@ computerChoiceEl.textContent = "";
 container.appendChild(computerChoiceEl);
 
 
+
+function getHumanChoice(humanSelection){
+    const computerSelection = getComputerChoice();
+
+    const result = playRound(humanSelection, computerSelection);
+
+    resultEl.textContent = `Result: ${result}`;
+  computerChoiceEl.textContent = `Computer chose: ${computerSelection}`;
+  scoreEl.textContent = `Score — You: ${humanScore}  Computer: ${computerScore}`;
+
+}
+
+
 // for (let index = 0; index < 5; index++) {
 //     playGame();
 //     }
@@ -116,26 +113,14 @@ container.appendChild(computerChoiceEl);
 
 
 const paperButton =  document.querySelector("#Paper");
-
-paperButton.addEventListener("click", () => {
-    const computerSelection = getComputerChoice();
-    playRound("paper", computerSelection);
-});
+paperButton.addEventListener("click", () => getHumanChoice("paper"));
 
 const rockButton =  document.querySelector("#Rock");
-
-rockButton.addEventListener("click", () => {
-    const computerSelection = getComputerChoice();
-    playRound("rock", computerSelection);
-});
+rockButton.addEventListener("click", () => getHumanChoice("rock"));
 
 
 const scissorsButton =  document.querySelector("#Scissors");
-
-scissorsButton.addEventListener("click", () => {
-    const computerSelection = getComputerChoice();
-    playRound("scissors", computerSelection);
-});
+scissorsButton.addEventListener("click", () => getHumanChoice("scissors"));
 
 
 
